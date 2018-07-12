@@ -1,5 +1,6 @@
 const graphql = require('graphql');
 const _ = require('lodash');
+const db = require('../db/index');
 
 const {
   GraphQLObjectType,
@@ -96,6 +97,9 @@ const Mutation = new GraphQLObjectType({
       args: {
         name: { type: GraphQLString },
         age: { type: GraphQLInt }
+      },
+      resolve(parent, args) {
+        let author = 
       }
     }
   }

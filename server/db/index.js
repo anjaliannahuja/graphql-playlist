@@ -13,4 +13,6 @@ client.connect(err => {
   }
 });
 
+client.query;
+
 module.exports = client;
