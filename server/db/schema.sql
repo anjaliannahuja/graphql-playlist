@@ -19,7 +19,7 @@ CREATE TABLE books (
 
 
 /*  Execute this file from the command line by typing:
- *    psql -U anjaliahuja < ./server/db/schema.sql
+ *    psql -h localhost < ./server/db/schema.sql
  *  to create the database and the tables.*/
 
 --  
