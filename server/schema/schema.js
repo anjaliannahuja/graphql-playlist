@@ -93,11 +93,15 @@ const Mutation = new GraphQLObjectType({
       args: {
         name: { type: new GraphQLNonNull(GraphQLString) },
         genre: { type: new GraphQLNonNull(GraphQLString) },
-        authorId: { type: new GraphQLNonNull(GraphQLID) }
+        author_id: { type: new GraphQLNonNull(GraphQLID) }
       },
       resolve(parent, args) {
-        db.insertBook(args.name, args.genre, args.authorId);
-        return { name: args.name, genre: args.genre };
+        db.insertBook(args.name, args.genre, args.author_id);
+        return {
+          name: args.name,
+          genre: args.genre,
+          author_id: args.author_id
+        };
       }
     }
   }
